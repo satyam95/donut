@@ -1,0 +1,8 @@
+{
+    "extends": "./tsconfig.app.json",
+    "compilerOptions": {
+      "declaration": false,       // turn off .d.ts from TS
+      "emitDeclarationOnly": false
+    },
+    "include": ["src/components"]
+  }
