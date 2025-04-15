@@ -53,13 +53,18 @@ function Button({
   );
 
   if (asChild) {
-    // Ensure that exactly one child is passed, then clone it with the computed className.
+    // Ensure that exactly one child is passed.
     const child = React.Children.only(children);
-    return React.cloneElement(child as React.ReactElement<any>, {
-      className: cn(
-        (child as React.ReactElement<any>).props.className,
-        computedClassName
-      ),
+    if (!React.isValidElement(child)) {
+      throw new Error(
+        'Button with asChild prop must have a valid React element as its child.'
+      );
+    }
+
+    // Cast the child to a React element with optional className in its props.
+    const typedChild = child as React.ReactElement<{ className?: string }>;
+    return React.cloneElement(typedChild, {
+      className: cn(typedChild.props.className, computedClassName),
       ...props,
     });
   }

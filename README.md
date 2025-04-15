@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+# Donut UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Donut UI** is a sleek React component library designed to work seamlessly with Tailwind CSS. It provides a variety of UI components that are easily customizable with your own color themes.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Ensure your project is set up with React.
+- **Tailwind CSS**: This library uses Tailwind CSS, so make sure it's installed and properly configured in your project.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Install **Donut UI** via npm:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+```bash
+npm install donut-ui
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tailwind CSS Theme Configuration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+For Tailwind CSS 4+, update your base colors by including the following CSS variables in your configuration. You can add them directly within your CSS file or update your Tailwind configuration to include your custom theme:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+## Usage Example
+
+After installation and configuration, you can start using the components in your project. Below is an example demonstrating how to import and use the **Button** component:
+
+```css
+@theme {
+  --color-primary: oklch(22.5% 0.146 265.82);
+  --color-primary-foreground: oklch(100% 0 0);
+  --color-secondary: oklch(0.69 0.146 265.82);
+  --color-secondary-foreground: oklch(100% 0 0);
+  --color-destructive: oklch(63.7% 0.237 25.331);
+  --color-background: oklch(1 0 0);
+  --color-accent: oklch(0.97 0 0);
+}
 ```
+
+```tsx
+import React from 'react';
+import { Button } from 'donut-ui';
+
+const App = () => {
+  return (
+    <div className="p-4">
+      <Button>Default Button</Button>
+    </div>
+  );
+};
+
+export default App;
+```
+
+## Contributing
+
+Contributions, bug reports, and feature requests are welcome! If you'd like to contribute, please open an issue or submit a pull request in the GitHub repository.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
