@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '../lib/utils';
+import { Slot } from '../lib/slot';
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
@@ -33,13 +34,10 @@ const buttonVariants = cva(
   }
 );
 
-interface ButtonProps
-  extends React.ComponentPropsWithoutRef<'button'>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
-}
+type ButtonProps = React.ComponentPropsWithoutRef<'button'> &
+  VariantProps<typeof buttonVariants> & { asChild?: boolean };
 
-function Button({
+export default function Button({
   className,
   variant,
   size,
@@ -48,25 +46,30 @@ function Button({
   ...props
 }: ButtonProps) {
   const computedClassName = cn(
-    buttonVariants({ variant, size, className }),
+    buttonVariants({ variant, size }),
+    className,
     !asChild && 'inline-block'
   );
 
   if (asChild) {
-    // Ensure that exactly one child is passed.
-    const child = React.Children.only(children);
-    if (!React.isValidElement(child)) {
+    // Check for invalid children first
+    if (
+      children == null ||
+      typeof children === 'string' ||
+      typeof children === 'number' ||
+      typeof children === 'boolean'
+    ) {
       throw new Error(
         'Button with asChild prop must have a valid React element as its child.'
       );
     }
+    const child = React.Children.only(children);
 
-    // Cast the child to a React element with optional className in its props.
-    const typedChild = child as React.ReactElement<{ className?: string }>;
-    return React.cloneElement(typedChild, {
-      className: cn(typedChild.props.className, computedClassName),
-      ...props,
-    });
+    return (
+      <Slot {...props} className={computedClassName}>
+        {child}
+      </Slot>
+    );
   }
 
   return (
@@ -75,5 +78,3 @@ function Button({
     </button>
   );
 }
-
-export default Button;

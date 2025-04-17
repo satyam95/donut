@@ -30,6 +30,13 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      quotes: [
+        'error',
+        'single',
+        { avoidEscape: true, allowTemplateLiterals: true },
+      ],
+      // enforce single quotes in JSX attributes:
+      'jsx-quotes': ['error', 'prefer-single'],
       'prettier/prettier': [
         'error',
         {

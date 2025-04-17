@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Button from '../components/Button';
+import { Button } from '../components';
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
@@ -111,5 +111,18 @@ export const Disabled: Story = {
     variant: 'default',
     size: 'default',
     disabled: true,
+  },
+};
+
+export const AsChild: Story = {
+  render: (args) => (
+    <Button {...args}>
+      <a href='https://example.com'>Anchor Button</a>
+    </Button>
+  ),
+  args: {
+    asChild: true,
+    variant: 'default',
+    size: 'default',
   },
 };

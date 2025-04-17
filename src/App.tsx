@@ -1,7 +1,11 @@
-import Button from './components/Button';
+import { Badge } from './components';
 
 function App() {
-  return <Button>Default</Button>;
+  return (
+    <>
+      <Badge>Badge</Badge>
+    </>
+  );
 }
 
 export default App;
