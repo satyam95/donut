@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import Badge from '../components/Badge';
+import { Badge } from '../components';
 
 // Helper component for asChild testing
 function CustomComponent(props: React.ComponentProps<'a'>) {

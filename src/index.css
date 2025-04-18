@@ -13,6 +13,9 @@
 
   --color-accent: oklch(0.97 0 0);
   --color-border: oklch(0.928 0.006 264.531);
+
+  --color-muted: oklch(0.967 0.003 264.542);
+  --color-muted-foreground: oklch(0.551 0.027 264.364);
 }
 
 @layer base {

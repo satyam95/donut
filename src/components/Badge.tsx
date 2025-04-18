@@ -27,7 +27,7 @@ const badgeVariants = cva(
 type BadgeProps = React.ComponentProps<'span'> &
   VariantProps<typeof badgeVariants> & { asChild?: boolean };
 
-export default function Badge({
+export function Badge({
   className,
   variant,
   asChild = false,

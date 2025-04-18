@@ -1,2 +1,3 @@
-export { default as Button } from './Button';
-export { default as Badge } from './Badge';
+export { Button } from './Button';
+export { Badge } from './Badge';
+export { Avatar, AvatarImage, AvatarFallback } from './Avatar';

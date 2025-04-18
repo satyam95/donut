@@ -1,9 +1,12 @@
-import { Badge } from './components';
+import { Avatar, AvatarFallback } from './components/Avatar';
 
 function App() {
   return (
     <>
-      <Badge>Badge</Badge>
+      <Avatar>
+        {/* <AvatarImage src='' alt='User Name' /> */}
+        <AvatarFallback>UN</AvatarFallback>
+      </Avatar>
     </>
   );
 }
