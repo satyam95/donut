@@ -2,6 +2,9 @@
 @import 'tailwindcss';
 
 @theme inline {
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.13 0.028 261.692);
+
   --color-primary: oklch(22.5% 0.146 265.82);
   --color-primary-foreground: oklch(100% 0 0);
 

@@ -9,3 +9,13 @@ export { Toggle } from './Toggle';
 export { Switch } from './Switch';
 export { Skeleton } from './Skeleton';
 export { Separator } from './Separator';
+export { Checkbox } from './Checkbox';
+export {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  BreadcrumbEllipsis,
+} from './Breadcrumb';
