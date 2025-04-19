@@ -6,3 +6,4 @@ export { Input } from './Input';
 export { Textarea } from './Textarea';
 export { RadioGroup, RadioGroupItem } from './RadioGroup';
 export { Toggle } from './Toggle';
+export { Switch } from './Switch';

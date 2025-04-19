@@ -16,6 +16,8 @@
 
   --color-muted: oklch(0.967 0.003 264.542);
   --color-muted-foreground: oklch(0.551 0.027 264.364);
+
+  --color-input: oklch(0.928 0.006 264.531);
 }
 
 @layer base {

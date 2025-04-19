@@ -1,9 +1,9 @@
-import { Toggle } from './components/Toggle';
+import { Switch } from './components';
 
 function App() {
   return (
     <>
-      <Toggle>Toggle</Toggle>
+      <Switch />
     </>
   );
 }
