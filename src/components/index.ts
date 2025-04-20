@@ -19,3 +19,9 @@ export {
   BreadcrumbSeparator,
   BreadcrumbEllipsis,
 } from './Breadcrumb';
+export {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from './Accordion';
