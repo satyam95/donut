@@ -25,3 +25,5 @@ export {
   AccordionTrigger,
   AccordionContent,
 } from './Accordion';
+export { Tabs, TabsList, TabsTrigger, TabsContent } from './Tabs';
+export { Alert, AlertTitle, AlertDescription } from './Alert';
