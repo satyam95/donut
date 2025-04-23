@@ -27,3 +27,21 @@ export {
 } from './Accordion';
 export { Tabs, TabsList, TabsTrigger, TabsContent } from './Tabs';
 export { Alert, AlertTitle, AlertDescription } from './Alert';
+export {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+  TooltipProvider,
+} from './Tooltip';
+export {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from './Select';

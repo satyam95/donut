@@ -1,16 +1,31 @@
-import { Terminal } from 'lucide-react';
-import { Alert, AlertDescription, AlertTitle } from './components';
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from './components';
 
 function App() {
   return (
     <div className='container mx-auto p-5'>
-      <Alert>
-        <Terminal className='h-4 w-4' />
-        <AlertTitle>Heads up!</AlertTitle>
-        <AlertDescription>
-          You can add components to your app using the cli.
-        </AlertDescription>
-      </Alert>
+      <Select placeholder='Select a fruit'>
+        <SelectTrigger className='w-[180px]'>
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectGroup>
+            <SelectLabel>Fruits</SelectLabel>
+            <SelectItem value='apple'>Apple</SelectItem>
+            <SelectItem value='banana'>Banana</SelectItem>
+            <SelectItem value='blueberry'>Blueberry</SelectItem>
+            <SelectItem value='grapes'>Grapes</SelectItem>
+            <SelectItem value='pineapple'>Pineapple</SelectItem>
+          </SelectGroup>
+        </SelectContent>
+      </Select>
     </div>
   );
 }
