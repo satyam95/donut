@@ -63,3 +63,24 @@ export {
   DropdownMenuSubTrigger,
   DropdownMenuSubContent,
 } from './DropdownMenu';
+
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardAction,
+  CardDescription,
+  CardContent,
+} from './Card';
+
+export {
+  Table,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from './Table';
