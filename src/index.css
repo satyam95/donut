@@ -21,6 +21,9 @@
   --color-muted-foreground: oklch(0.551 0.027 264.364);
 
   --color-input: oklch(0.928 0.006 264.531);
+
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.13 0.028 261.692);
 }
 
 @layer base {
