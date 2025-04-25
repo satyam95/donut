@@ -97,3 +97,5 @@ export {
   DialogTitle,
   DialogDescription,
 } from './Dialog';
+
+export { Toaster, toast } from './Toaster';
