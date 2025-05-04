@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1746360452066" clover="3.2.0">
-  <project timestamp="1746360452067" name="All files">
+<coverage generated="1746360937824" clover="3.2.0">
+  <project timestamp="1746360937825" name="All files">
     <metrics statements="1943" coveredstatements="1943" conditionals="360" coveredconditionals="360" methods="122" coveredmethods="122" elements="2425" coveredelements="2425" complexity="0" loc="1943" ncloc="1943" packages="1" files="24" classes="24"/>
     <file name="Accordion.tsx" path="C:\Users\ACER\Desktop\donut-ui\src\components\Accordion.tsx">
       <metrics statements="107" coveredstatements="107" conditionals="31" coveredconditionals="31" methods="7" coveredmethods="7"/>
