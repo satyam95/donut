@@ -227,7 +227,7 @@ const SelectContent = memo(
         <div
           ref={contentRef}
           className={cn(
-            'z-40 mt-1 w-full bg-white rounded-md border shadow-md overflow-auto max-h-[300px]',
+            'absolute z-40 mt-1 w-full bg-white rounded-md border shadow-md overflow-auto max-h-[300px]',
             className
           )}
           role='listbox'

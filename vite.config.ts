@@ -35,12 +35,26 @@ export default defineConfig({
         'tailwind-merge',
         'class-variance-authority',
       ],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
+      output: [
+        {
+          format: 'es',
+          entryFileNames: 'donut-ui.es.js',
+          banner: '"use client";\n',
+          globals: {
+            react: 'React',
+            'react-dom': 'ReactDOM',
+          },
         },
-      },
+        // CJS bundle (no banner needed)
+        {
+          format: 'cjs',
+          entryFileNames: 'donut-ui.cjs.js',
+          globals: {
+            react: 'React',
+            'react-dom': 'ReactDOM',
+          },
+        },
+      ],
     },
   },
   test: {
