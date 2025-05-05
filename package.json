@@ -1,16 +1,19 @@
 {
-  "name": "donut-ui",
-  "version": "0.0.1",
+  "name": "@satyam95/donutui",
+  "version": "0.0.2",
   "type": "module",
-  "main": "./dist/donut-ui.cjs.js",
-  "module": "./dist/donut-ui.es.js",
+  "main": "./dist/donutui.cjs.js",
+  "module": "./dist/donutui.es.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/donut-ui.es.js",
-      "require": "./dist/donut-ui.cjs.js"
+      "import": "./dist/donutui.es.js",
+      "require": "./dist/donutui.cjs.js"
     }
   },
+  "files": [
+    "./dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",

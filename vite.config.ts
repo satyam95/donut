@@ -22,7 +22,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/components/index.ts'),
-      name: 'donut-ui',
+      name: 'donutui',
       formats: ['es', 'cjs'],
       fileName: (format) => `donut-ui.${format}.js`,
     },
@@ -38,7 +38,7 @@ export default defineConfig({
       output: [
         {
           format: 'es',
-          entryFileNames: 'donut-ui.es.js',
+          entryFileNames: 'donutui.es.js',
           banner: '"use client";\n',
           globals: {
             react: 'React',
@@ -48,7 +48,7 @@ export default defineConfig({
         // CJS bundle (no banner needed)
         {
           format: 'cjs',
-          entryFileNames: 'donut-ui.cjs.js',
+          entryFileNames: 'donutui.cjs.js',
           globals: {
             react: 'React',
             'react-dom': 'ReactDOM',

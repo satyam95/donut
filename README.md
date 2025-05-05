@@ -12,7 +12,7 @@
 Install **Donut UI** via npm:
 
 ```bash
-npm install donut-ui
+npm install @satyam95/donutui
 ```
 
 ## Tailwind CSS Theme Configuration
@@ -41,7 +41,7 @@ import { Button } from 'donut-ui';
 
 const App = () => {
   return (
-    <div className="p-4">
+    <div className='p-4'>
       <Button>Default Button</Button>
     </div>
   );
