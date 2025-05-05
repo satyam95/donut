@@ -1,7 +1,6 @@
 {
   "name": "donut-ui",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "./dist/donut-ui.cjs.js",
   "module": "./dist/donut-ui.es.js",
@@ -28,6 +27,20 @@
       "eslint --fix"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyam95/donut.git"
+  },
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "author": "Satyam Sagar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/satyam95/donut/issues"
+  },
+  "homepage": "https://github.com/satyam95/donut#readme",
   "peerDependencies": {
     "@tailwindcss/vite": "^4.1.3",
     "class-variance-authority": "^0.7.1",
